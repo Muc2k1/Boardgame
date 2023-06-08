@@ -11,6 +11,7 @@ namespace ElixirMaker.Object
     public class CardSample : MonoBehaviour
     {
         [SerializeField] private TMP_Text cardTitleTxt;
+        [SerializeField] private Image cardArtwork;
         [SerializeField] private Image cardBackground; //Dummy
         private ElixirCard cardData;
         public void Init(ElixirCard cardData)
@@ -18,6 +19,7 @@ namespace ElixirMaker.Object
             this.cardData = cardData;
 
             this.cardTitleTxt.text = this.cardData.Title;
+            this.cardArtwork.sprite = this.cardData.Artwork;
             cardBackground.color = this.cardData.CardData; //Dummy code
         }
         public void OnInspect()

@@ -6,7 +6,8 @@ namespace ElixirMaker.Definer
 {
     public enum ePlace
     {
-        Imperial,
+        Default = -1,
+        Imperial = 0,
         HugeRoad,
         ElixirCity,
         Forest,

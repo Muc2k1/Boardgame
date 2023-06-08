@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardTitleTxt: {fileID: 6911614144730204201}
+  cardArtwork: {fileID: 7657130015505574501}
   cardBackground: {fileID: 6091499966836869487}
 --- !u!1 &5897558770143984446
 GameObject:
