@@ -28,14 +28,60 @@ namespace ElixirMaker.Config
     public class ElixirCardFamilyData
     {
         public ePlace CardFamily;
-        public List<ElixirCardData> CardList;
+        public List<ElixirCardData> CardList; //will replace ElixirCardData to others
     }
     [Serializable]
     public class ElixirCardData
     {
+        public eCardType TYPE;
         public string CardTitle;
         public Sprite CardArtwork;
         public string CardDescription;
         public Color CardData; //That's mean card effect, will change later
     }
+    [Serializable]
+    public class RecipeCardData : ElixirCardData
+    {
+        public new const eCardType TYPE = eCardType.Recipe;
+        public ElixirRecipe Recipe;
+    }
+    [Serializable]
+    public class ElixirRecipe
+    {
+        public List<RecipeLine> Lines;
+        public ElixirConfig Result;
+    }
+    public class RecipeLine
+    {
+        public eHerb HerbType;
+        public bool IsNotInclude;
+        public int Quantity;
+    }
+    // [Serializable]
+    // public class ElixirCardData
+    // {
+    //     public eCardType TYPE;
+    //     public string CardTitle;
+    //     public Sprite CardArtwork;
+    //     public string CardDescription;
+    //     public Color CardData; //That's mean card effect, will change later
+    // }
+    // [Serializable]
+    // public class ElixirCardData
+    // {
+    //     public eCardType TYPE;
+    //     public string CardTitle;
+    //     public Sprite CardArtwork;
+    //     public string CardDescription;
+    //     public Color CardData; //That's mean card effect, will change later
+    // }
+    // [Serializable]
+    // public class ElixirCardData
+    // {
+    //     public eCardType TYPE;
+    //     public string CardTitle;
+    //     public Sprite CardArtwork;
+    //     public string CardDescription;
+    //     public Color CardData; //That's mean card effect, will change later
+    // }
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ElixirMaker.Definer;
+using ElixirMaker.Config;
 using ElixirMaker.Object;
 
 namespace ElixirMaker.Manager
@@ -10,7 +10,7 @@ namespace ElixirMaker.Manager
     {
         [SerializeField] private Transform playerHand;
         [SerializeField] private CardSample cardSample;
-        public void CreateCardToPlayerHand(int playerIndex, ElixirCard currentCard)
+        public void CreateCardToPlayerHand(int playerIndex, ElixirCardData currentCard)
         {
             CardSample newDisplayCard = Instantiate(cardSample, this.playerHand); //playerIndex to check what hand we wanna create card
             newDisplayCard.Init(currentCard);

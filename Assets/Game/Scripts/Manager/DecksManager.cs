@@ -9,10 +9,10 @@ namespace ElixirMaker.Manager
     public class DecksManager : MonoBehaviour
     {
         [SerializeField] private CardsConfig cardsConfig;
-        public ElixirCard DrawACardFrom(ePlace place)
+        public ElixirCardData DrawACardFrom(ePlace place)
         {
             ElixirCardData cardData = this.cardsConfig.RandomPickOneCard(place);
-            return new ElixirCard(cardData);
+            return cardData;
         }
     }
 }

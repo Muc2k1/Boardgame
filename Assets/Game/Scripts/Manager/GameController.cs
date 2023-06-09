@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ElixirMaker.Definer;
+using ElixirMaker.Config;
 using ElixirMaker.Object;
 
 namespace ElixirMaker.Manager
@@ -21,7 +22,7 @@ namespace ElixirMaker.Manager
         public void DrawACard(int playerIndex, ePlace place)
         {
             //player index will define later
-            ElixirCard currentCard = this.decksManager.DrawACardFrom(place);
+            ElixirCardData currentCard = this.decksManager.DrawACardFrom(place);
             this.gameUIManager.CreateCardToPlayerHand(playerIndex, currentCard);
         }
         public void OnCardPlay(int playerIndex, CardSample card)
