@@ -51,21 +51,22 @@ namespace ElixirMaker.Config
         public List<RecipeLine> Lines;
         public ElixirConfig Result;
     }
+    [Serializable]
     public class RecipeLine
     {
-        public eHerb HerbType;
         public bool IsNotInclude;
+        public eHerb HerbType;
         public int Quantity;
     }
-    // [Serializable]
-    // public class ElixirCardData
-    // {
-    //     public eCardType TYPE;
-    //     public string CardTitle;
-    //     public Sprite CardArtwork;
-    //     public string CardDescription;
-    //     public Color CardData; //That's mean card effect, will change later
-    // }
+    [Serializable]
+    public class SpellCardData : ElixirCardData
+    {
+        public new const eCardType TYPE = eCardType.Spell;
+        // public string CardTitle;
+        // public Sprite CardArtwork;
+        // public string CardDescription;
+        // public Color CardData; //That's mean card effect, will change later
+    }
     // [Serializable]
     // public class ElixirCardData
     // {

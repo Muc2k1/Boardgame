@@ -15,5 +15,9 @@ namespace ElixirMaker.Manager
             CardSample newDisplayCard = Instantiate(cardSample, this.playerHand); //playerIndex to check what hand we wanna create card
             newDisplayCard.Init(currentCard);
         }
+        public void InspectCard(int playerIndex, CardSample currentCard)
+        {
+            //Show
+        }
     }
 }

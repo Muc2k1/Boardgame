@@ -18,10 +18,13 @@ namespace ElixirMaker.Definer
     }
     public enum eCardType
     {
-        Recipe = 0,
+        // This can hold in player hand
+        Recipe = 0, 
+        Herb,
+
+        // This must use immediately when player draw this card
         Immediately,
         Spell, // Same with Potion/Elixir
-        Herb
     }  
     public enum eHerb
     {

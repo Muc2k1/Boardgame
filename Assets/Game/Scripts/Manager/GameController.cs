@@ -10,6 +10,7 @@ namespace ElixirMaker.Manager
     public class GameController : MonoBehaviour
     {
         public static GameController Instance;
+        public List<PlayerData> playerDatas;
         public GameUIManager gameUIManager { get; private set; }
         public DecksManager decksManager { get; private set; }
         private void Awake() 
@@ -25,9 +26,21 @@ namespace ElixirMaker.Manager
             ElixirCardData currentCard = this.decksManager.DrawACardFrom(place);
             this.gameUIManager.CreateCardToPlayerHand(playerIndex, currentCard);
         }
+        public void OnCardInspect(int playerIndex, CardSample currentCard)
+        {
+            this.gameUIManager.InspectCard(playerIndex, currentCard);
+        }
         public void OnCardPlay(int playerIndex, CardSample card)
         {
             Destroy(card.gameObject);
+        }
+        public void OnPlayerMakeElixir(int playerIndex, ElixirRecipe recipe)
+        {
+            this.playerDatas[playerIndex].MakeAElixir(recipe);
+        }
+        public void OnPlayerUseSpell(int playerIndex, SpellCardData spellData)
+        {
+
         }
     }
 }

@@ -25,7 +25,23 @@ namespace ElixirMaker.Object
         }
         public void OnInspect()
         {
-            GameController.Instance.OnCardPlay(0, this);
+            GameController.Instance.OnCardInspect(0, this);
+        }
+        public void PlayThisCard()
+        {
+            switch (this.cardData.TYPE)
+            {
+                case eCardType.Recipe:
+                    RecipeCardData recipeCardData = (RecipeCardData)this.cardData;
+                    GameController.Instance.OnPlayerMakeElixir(0, recipeCardData.Recipe);
+                    //Create the elixir
+                break;
+                case eCardType.Spell:
+                    SpellCardData spellData = (SpellCardData)this.cardData;
+                    GameController.Instance.OnPlayerUseSpell(0, spellData);
+                    //Use the speed
+                break;
+            }
         }
     }
 }
