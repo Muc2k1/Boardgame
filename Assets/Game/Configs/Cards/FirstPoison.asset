@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720f79e96b5869a44b3f058ee203d66c, type: 3}
+  m_Name: FirstPoison
+  m_EditorClassIdentifier: 
+  TYPE: 0
+  CardTitle: First Poison
+  CardArtwork: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+  CardDescription: Muaha hua ha
+  CardData: {r: 0.6415094, g: 0, b: 0, a: 1}
+  Recipe:
+    Lines:
+    - IsNotInclude: 0
+      HerbType: 0
+      Quantity: 1
+    - IsNotInclude: 0
+      HerbType: 3
+      Quantity: 1
+    - IsNotInclude: 0
+      HerbType: 6
+      Quantity: 1
+    Result: {fileID: 0}

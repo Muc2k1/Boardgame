@@ -15,22 +15,9 @@ MonoBehaviour:
   CardFamilies:
   - CardFamily: 0
     CardList:
-    - CardTitle: Haha
-      CardArtwork: {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
-      CardDescription: 
-      CardData: {r: 1, g: 0.63584906, b: 0.63584906, a: 1}
-    - CardTitle: Muc simp
-      CardArtwork: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
-      CardDescription: 
-      CardData: {r: 0.63529414, g: 1, b: 0.778298, a: 1}
-    - CardTitle: Ened Lover
-      CardArtwork: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
-      CardDescription: 
-      CardData: {r: 0.63529414, g: 0.96161556, b: 1, a: 1}
-    - CardTitle: None
-      CardArtwork: {fileID: 21300000, guid: b6a96c7c65795c94abf54a62adbf5c38, type: 3}
-      CardDescription: 
-      CardData: {r: 0.47547168, g: 0.552061, b: 1, a: 1}
+    - {fileID: 11400000, guid: bea24bf91059e4b479a9504d73217706, type: 2}
+    - {fileID: 11400000, guid: 5872b954cde168848873427bb7e2a320, type: 2}
+    - {fileID: 11400000, guid: 41aedfc483fe3dd43956e1ef0c8eac6d, type: 2}
   - CardFamily: 1
     CardList: []
   - CardFamily: 2

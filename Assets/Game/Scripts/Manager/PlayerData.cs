@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ElixirMaker.Definer;
 using ElixirMaker.Config;
 
 namespace ElixirMaker.Manager
 {
     public class PlayerData
     {
-        public string PlayerAlias;
+        private string playerAlias;
+        private Dictionary<eHerb,int> playerHerbs;
+        private Dictionary<eMedicinalProp, int> playerPoisons;
+        private Dictionary<ElixirCardData, int> playerHand;
         public bool IsCanMakeElixir(ElixirRecipe recipe)
         {
             return true;

@@ -10,6 +10,7 @@ namespace ElixirMaker.Manager
     {
         [SerializeField] private Transform playerHand;
         [SerializeField] private CardSample cardSample;
+        [SerializeField] private CardInspector cardInspector;
         public void CreateCardToPlayerHand(int playerIndex, ElixirCardData currentCard)
         {
             CardSample newDisplayCard = Instantiate(cardSample, this.playerHand); //playerIndex to check what hand we wanna create card
@@ -17,7 +18,8 @@ namespace ElixirMaker.Manager
         }
         public void InspectCard(int playerIndex, CardSample currentCard)
         {
-            //Show
+            this.cardInspector.gameObject.SetActive(true);
+            this.cardInspector.ShowCardInformation(currentCard);
         }
     }
 }
