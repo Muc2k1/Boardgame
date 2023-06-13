@@ -14,14 +14,14 @@ namespace ElixirMaker.Object
         [SerializeField] private TMP_Text cardTitleTxt;
         [SerializeField] private Image cardArtwork;
         [SerializeField] private Image cardBackground; //Dummy
-        private ElixirCardData cardData;
+        public ElixirCardData CardData { get; private set; }
         public void Init(ElixirCardData cardData)
         {
-            this.cardData = cardData;
+            this.CardData = cardData;
 
-            this.cardTitleTxt.text = this.cardData.CardTitle;
-            this.cardArtwork.sprite = this.cardData.CardArtwork;
-            cardBackground.color = this.cardData.CardData; //Dummy code
+            this.cardTitleTxt.text = this.CardData.CardTitle;
+            this.cardArtwork.sprite = this.CardData.CardArtwork;
+            cardBackground.color = this.CardData.CardData; //Dummy code
         }
         public void OnInspect()
         {
@@ -29,18 +29,18 @@ namespace ElixirMaker.Object
         }
         public void PlayThisCard()
         {
-            switch (this.cardData.TYPE)
+            switch (this.CardData.TYPE)
             {
                 case eCardType.Recipe:
-                    RecipeCardData recipeCardData = (RecipeCardData)this.cardData;
+                    RecipeCardData recipeCardData = (RecipeCardData)this.CardData;
                     GameController.Instance.OnPlayerMakeElixir(0, recipeCardData.Recipe);
                     //Create the elixir
-                break;
+                    break;
                 case eCardType.Spell:
-                    SpellCardData spellData = (SpellCardData)this.cardData;
+                    SpellCardData spellData = (SpellCardData)this.CardData;
                     GameController.Instance.OnPlayerUseSpell(0, spellData);
                     //Use the speed
-                break;
+                    break;
             }
         }
     }

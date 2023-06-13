@@ -1,16 +1,33 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using ElixirMaker.Config;
+using UnityEngine.UI;
+using TMPro;
+using ElixirMaker.Definer;
 using ElixirMaker.Object;
+using ElixirMaker.Config;
 
 namespace ElixirMaker.Manager
 {
     public class CardInspector : MonoBehaviour
     {
+        [SerializeField] private TMP_Text cardTitleTxt;
+        [SerializeField] private Image cardArtwork;
+        [SerializeField] private Image cardBackground; //Dummy
+        [SerializeField] private TMP_Text cardDescription;
+        [SerializeField] private RecipeDisplay recipeDisplayer;
+        private ElixirCardData cardData; //Dummy
+        public void Init(ElixirCardData cardData)
+        {
+            this.cardData = cardData;
+
+            this.cardTitleTxt.text = this.cardData.CardTitle;
+            this.cardArtwork.sprite = this.cardData.CardArtwork;
+            cardBackground.color = this.cardData.CardData; //Dummy code
+        }
         public void ShowCardInformation(CardSample card)
         {
-
+            this.recipeDisplayer.CheckIsRecipeCardType(card);
         }
         public void CloseCardInspector()
         {
