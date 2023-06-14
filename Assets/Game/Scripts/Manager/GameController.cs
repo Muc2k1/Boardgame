@@ -20,6 +20,7 @@ namespace ElixirMaker.Manager
 
             this.GameUIManager = GetComponent<GameUIManager>();
             this.DecksManager = GetComponent<DecksManager>();
+            this.GameConfig = GetComponent<GameConfig>();
         }
         public void DrawACard(int playerIndex, ePlace place)
         {

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4731bdc6ed83b43a6808024e928e48, type: 3}
+  m_Name: Herb Dictionary
+  m_EditorClassIdentifier: 
+  herbConfigs:
+  - HerbType: 0
+    MainSprite: {fileID: 21300000, guid: ee4f7f70165a7824ba74fb97ea5a65ca, type: 3}
+  - HerbType: 1
+    MainSprite: {fileID: 21300000, guid: 0fbada176dfa9b446b429ea7dd91308f, type: 3}
+  - HerbType: 2
+    MainSprite: {fileID: 21300000, guid: ff544d8849f528e43a139765d85f6175, type: 3}
+  - HerbType: 3
+    MainSprite: {fileID: 21300000, guid: b01aa3166febc3e40aec305cc74ac081, type: 3}
+  - HerbType: 4
+    MainSprite: {fileID: 21300000, guid: 44a070d17c87e70488892613c8526bbf, type: 3}
+  - HerbType: 5
+    MainSprite: {fileID: 21300000, guid: f9b5e9c0c35741e44bf69ed7afe978c7, type: 3}
+  - HerbType: 6
+    MainSprite: {fileID: 21300000, guid: 76a14dbe84c25054fb4ddf77cbfc5390, type: 3}
+  - HerbType: 7
+    MainSprite: {fileID: 21300000, guid: bd7b59126301eca47b8ca9df03d88b22, type: 3}
+  - HerbType: 8
+    MainSprite: {fileID: 21300000, guid: eb2d2c18b7232e243a47678ccb58a462, type: 3}

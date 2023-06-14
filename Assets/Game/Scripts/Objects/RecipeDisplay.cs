@@ -8,17 +8,32 @@ namespace ElixirMaker.Object
 {
     public class RecipeDisplay : MonoBehaviour
     {
+        [SerializeField] private GameObject recipeElementSample;
         private List<RecipeElement> recipeElements;
         public void CheckIsRecipeCardType(CardSample card)
         {
             if (card.CardData.TYPE == eCardType.Recipe)
             {
-                ShowCardRecipe((RecipeCardData)card.CardData);
+                RecipeCardData data = (RecipeCardData)card.CardData;
+                ShowCardRecipe(data.Recipe);
             }
         }
-        private void ShowCardRecipe(RecipeCardData recipeData)
+        private void ShowCardRecipe(ElixirRecipe recipe)
         {
-
+            RemoveAllChildren();
+            foreach (RecipeLine line in recipe.Lines)
+            {
+                GameObject newRecipeElement = Instantiate(this.recipeElementSample, this.transform);
+                RecipeElement newRecipeElementComp = newRecipeElement.GetComponent<RecipeElement>();
+                newRecipeElementComp.Init(line.HerbType, line.Quantity);
+            }
+        }
+        private void RemoveAllChildren()
+        {
+            for (int i = this.transform.childCount - 1; i >= 0; i--)
+            {
+                Destroy(this.transform.GetChild(i).gameObject);
+            }
         }
     }
 }
