@@ -21,7 +21,7 @@ namespace ElixirMaker.Manager
         [SerializeField] private GameObject useButton; //We separate use button and create 
         [SerializeField] private GameObject createButton;
         private ElixirCardData cardData; //Dummy
-        public void Init(ElixirCardData cardData)
+        public void GenerateDisplay(ElixirCardData cardData)
         {
             this.cardData = cardData;
 
@@ -54,7 +54,7 @@ namespace ElixirMaker.Manager
         public void ShowCardInformation(CardSample card)
         {
             this.recipeDisplayer.CheckIsRecipeCardType(card);
-            Init(card.CardData);
+            GenerateDisplay(card.CardData);
         }
         public void CloseCardInspector()
         {

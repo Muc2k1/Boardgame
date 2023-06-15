@@ -14,6 +14,7 @@ namespace ElixirMaker.Manager
         public GameConfig GameConfig { get; private set; }
         public GameUIManager GameUIManager { get; private set; }
         public DecksManager DecksManager { get; private set; }
+        public CardSample currentInspectCard;
         private void Awake() 
         {
             Instance = this;
@@ -21,6 +22,10 @@ namespace ElixirMaker.Manager
             this.GameUIManager = GetComponent<GameUIManager>();
             this.DecksManager = GetComponent<DecksManager>();
             this.GameConfig = GetComponent<GameConfig>();
+
+            this.PlayerDatas = new List<PlayerData>();
+            //Dummy
+            this.PlayerDatas.Add(new PlayerData());
         }
         public void DrawACard(int playerIndex, ePlace place)
         {
@@ -31,6 +36,15 @@ namespace ElixirMaker.Manager
         public void OnCardInspect(int playerIndex, CardSample currentCard)
         {
             this.GameUIManager.InspectCard(playerIndex, currentCard);
+            this.currentInspectCard = currentCard;
+        }
+        public void OnButtonCreateClicked()
+        {
+            this.currentInspectCard.PlayThisCard(); // will separate Use - Create
+        }
+        public void OnButtonUseClicked()
+        {
+            this.currentInspectCard.PlayThisCard(); // will separate Use - Create
         }
         public void OnCardPlay(int playerIndex, CardSample card)
         {

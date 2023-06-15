@@ -120,7 +120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6997530517141996422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6106580383410517768}
+        m_TargetAssemblyTypeName: ElixirMaker.Manager.GameController, Assembly-CSharp
+        m_MethodName: OnButtonCreateClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &759057067045813978
 GameObject:
   m_ObjectHideFlags: 0
@@ -3189,6 +3201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bdc7e1a29a5b5a4e84f7b66ff38620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentInspectCard: {fileID: 0}
 --- !u!114 &2220547326761985782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3708,7 +3721,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6349640638064811667}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6106580383410517768}
+        m_TargetAssemblyTypeName: ElixirMaker.Manager.GameController, Assembly-CSharp
+        m_MethodName: OnButtonUseClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5184426063427376356
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,10 @@ namespace ElixirMaker.Manager
         private Dictionary<eHerb,int> playerHerbs = new Dictionary<eHerb,int>();
         private Dictionary<eMedicinalProp, int> playerPoisons = new Dictionary<eMedicinalProp, int>();
         private Dictionary<ElixirCardData, int> playerHand = new Dictionary<ElixirCardData, int>();
+        public PlayerData()
+        {
+            this.playerAlias = "Dummy";
+        }
         public bool IsCanMakeElixir(RecipeCardData cardData)
         {
             Dictionary<eHerb,int> recipeRequire = cardData.Recipe.ConvertToDictionary();
