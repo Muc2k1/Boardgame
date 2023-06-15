@@ -33,7 +33,7 @@ namespace ElixirMaker.Object
             {
                 case eCardType.Recipe:
                     RecipeCardData recipeCardData = (RecipeCardData)this.CardData;
-                    GameController.Instance.OnPlayerMakeElixir(0, recipeCardData.Recipe);
+                    GameController.Instance.OnPlayerMakeElixir(0, recipeCardData);
                     //Create the elixir
                     break;
                 case eCardType.Spell:

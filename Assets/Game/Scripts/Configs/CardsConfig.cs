@@ -44,6 +44,11 @@ namespace ElixirMaker.Config
     {
         public List<RecipeLine> Lines;
         public ElixirConfig Result;
+        public Dictionary<eHerb,int> ConvertToDictionary()
+        {
+            Dictionary<eHerb,int> result = new Dictionary<eHerb, int>();
+            return result;
+        }
     }
     [Serializable]
     public class RecipeLine

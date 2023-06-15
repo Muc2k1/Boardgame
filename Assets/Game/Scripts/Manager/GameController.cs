@@ -36,9 +36,9 @@ namespace ElixirMaker.Manager
         {
             Destroy(card.gameObject);
         }
-        public void OnPlayerMakeElixir(int playerIndex, ElixirRecipe recipe)
+        public void OnPlayerMakeElixir(int playerIndex, RecipeCardData recipe)
         {
-            this.PlayerDatas[playerIndex].MakeAElixir(recipe);
+            this.PlayerDatas[playerIndex].MakeAPoison(recipe);
         }
         public void OnPlayerUseSpell(int playerIndex, SpellCardData spellData)
         {

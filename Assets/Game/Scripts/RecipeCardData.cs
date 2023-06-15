@@ -9,6 +9,7 @@ namespace ElixirMaker.Config
     public class RecipeCardData : ElixirCardData
     {
         public new const eCardType TYPE = eCardType.Recipe;
+        public eMedicinalProp MedicinalProp;
         public ElixirRecipe Recipe;
     }
 }
