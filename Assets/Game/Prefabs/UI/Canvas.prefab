@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 57949676226099677}
   - component: {fileID: 5602185641134787365}
   m_Layer: 5
-  m_Name: VerticalRight
+  m_Name: VerticalMIddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 1363181979238451664}
   - component: {fileID: 2302406876246331626}
   m_Layer: 5
-  m_Name: VerticalRight (1)
+  m_Name: VerticalRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

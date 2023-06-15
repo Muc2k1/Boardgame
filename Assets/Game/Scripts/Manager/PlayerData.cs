@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ElixirMaker.Definer;
 using ElixirMaker.Config;
+using ElixirMaker.Object;
 
 namespace ElixirMaker.Manager
 {
